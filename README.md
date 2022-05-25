@@ -1,19 +1,19 @@
-# to-do-list
+# To Do List
 
-## Project setup
+## Setup do Projeto
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compilador e hot-reloads para desenvolvimento
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compilador e minifies para produção
 ```
 yarn build
 ```
 
-### Customize configuration
+### Para customizar as configurações, confira:
 See [Configuration Reference](https://cli.vuejs.org/config/).
