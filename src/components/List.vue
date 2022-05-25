@@ -1,10 +1,11 @@
 <template>
   <ul>
-    <select v-model="selected" @change="onChange($event)">
+    <select v-model="selected">
       <option disabled value="">Escolha a visualização</option>
-      <option v-for="option in options" :key="option.text">
-        {{ option.text }}
-      </option>
+      <option value="1"> Todos </option>
+      <option value="2"> A fazer </option>
+      <option value="3"> Concluído </option>
+      <option value="4"> Deletado </option>
     </select>
 
     <li v-for="item in itens" :key="item.id">
@@ -26,12 +27,6 @@ export default {
   data() {
     return {
       selected: "",
-      options: [
-        { text: "Todos", value: "1" },
-        { text: "A fazer", value: "2" },
-        { text: "Concluído", value: "3" },
-        { text: "Deletado", value: "4" },
-      ],
     };
   },
   computed: {
@@ -40,9 +35,15 @@ export default {
     },
   },
   methods: {
-    onChange(event) {
-      console.log(event.target.value);
-      return this.data.filter((item) => item.concluded === false);
+    itens() {
+      return this.data.filter((item) => {
+        if(this.selected === '1') {
+          return item.concluded === false
+        } else if (this.select === '2') {
+          
+        }
+      })
+    }
     },
   },
 };
