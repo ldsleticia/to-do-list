@@ -42,6 +42,7 @@ export default {
   methods: {
     onChange(event) {
       console.log(event.target.value);
+      return this.data.filter((item) => item.concluded === false);
     },
   },
 };

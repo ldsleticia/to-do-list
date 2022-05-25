@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Lista de Tarefas</h1>
     <List :data="list" @remove="handleRemove"/>
-    <Form @add="addNewTask" />
+    <Form @add="addNewTask" @onChange="handleN"/>
   </div>
 </template>
 
@@ -28,6 +28,10 @@ export default {
       const index = this.list.findIndex(i => i.id === item.id)
       this.list[index].excluded = true
     },
+    handleN(item) {
+      const index = this.list.findIndex(i => i.id === item.id)
+      this.list[index].concluded = true
+    }
   },
 };
 </script>
