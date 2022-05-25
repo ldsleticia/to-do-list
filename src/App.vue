@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <h1>Lista de Tarefas</h1>
-    <List :data="list" @remove="handleRemove" />
-    <Form @add="addNewTask"/>
+    <List :data="list" @remove="handleRemove"/>
+    <Form @add="addNewTask" />
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
     handleRemove(item) {
       const index = this.list.findIndex(i => i.id === item.id)
       this.list[index].excluded = true
-    }
+    },
   },
 };
 </script>
