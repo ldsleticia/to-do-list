@@ -28,10 +28,6 @@ export default {
       const index = this.list.findIndex(i => i.id === item.id)
       this.list[index].excluded = true
     },
-    handleN(item) {
-      const index = this.list.findIndex(i => i.id === item.id)
-      this.list[index].concluded = true
-    }
   },
 };
 </script>
