@@ -38,6 +38,8 @@ export default {
           return item.concluded === true;
         } else if (this.selected === "4") {
           return item.excluded === true;
+        } else if(this.selected === "1") {
+            return item;
         }
         return item.excluded === false;
       });
