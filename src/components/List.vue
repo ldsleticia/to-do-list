@@ -34,27 +34,12 @@ export default {
       return this.data.filter((item) => {
         if (this.selected === "2") {
           return item.concluded === false;
-        } else if (this.select === "3") {
-          return item.concluded === true;
-        } else if (this.selected === "4") {
-          return item.excluded === true;
-        } else {
-          return this.data.filter((item) => item.excluded === false);
-        }
-      });
-      // return this.data.filter((item) => item.excluded === false);
-    },
-  },
-  methods: {
-    itensSelected() {
-      return this.data.filter((item) => {
-        if (this.selected === "2") {
-          return item.concluded === false;
-        } else if (this.select === "3") {
+        } else if (this.selected === "3") {
           return item.concluded === true;
         } else if (this.selected === "4") {
           return item.excluded === true;
         }
+        return item.excluded === false;
       });
     },
   },
